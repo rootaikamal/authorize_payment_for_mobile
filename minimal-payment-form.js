@@ -4,15 +4,18 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ApiContracts = require('authorizenet').APIContracts;
 const ApiControllers = require('authorizenet').APIControllers;
+const cors = require('cors');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0'; // Listen on all network interfaces
 
 // Your credentials
 const API_LOGIN_ID = '8nTEhg6Z6X';
 const TRANSACTION_KEY = '46T8as7G645vfAQG';
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Payment form page
@@ -236,8 +239,9 @@ function processPayment(paymentData) {
     });
 }
 
-app.listen(PORT, () => {
-    console.log(`🚀 Payment Form running on http://localhost:${PORT}/payment-form`);
+app.listen(PORT, HOST, () => {
+    console.log(`🚀 Payment Form running on http://0.0.0.0:${PORT}/payment-form`);
+    console.log(`🌐 Access from: http://15.206.253.123:${PORT}/payment-form`);
     console.log(`🔑 API Login ID: ${API_LOGIN_ID}`);
     console.log(`💳 Test Card: 4242424242424242`);
 }); 
