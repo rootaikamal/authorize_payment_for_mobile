@@ -7,7 +7,7 @@ const ApiControllers = require('authorizenet').APIControllers;
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5005;
 const HOST = '0.0.0.0'; // Listen on all network interfaces
 
 // Your credentials
@@ -244,4 +244,5 @@ app.listen(PORT, HOST, () => {
     console.log(`🌐 Access from: http://15.206.253.123:${PORT}/payment-form`);
     console.log(`🔑 API Login ID: ${API_LOGIN_ID}`);
     console.log(`💳 Test Card: 4242424242424242`);
+    console.log(`📱 API Endpoint: http://15.206.253.123:${PORT}/api/process-payment`);
 }); 
