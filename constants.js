@@ -1,7 +1,7 @@
 'use strict';
 
-module.exports.apiLoginKey = '5KP3u95bQpv';
-module.exports.transactionKey = '346HZ32z3fP4hTG2';
+module.exports.apiLoginKey = '8nTEhg6Z6X';
+module.exports.transactionKey = '46T8as7G645vfAQG';
 module.exports.config = {
     'logger': {
         'enabled': false,

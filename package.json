@@ -6,10 +6,19 @@
   "dependencies": {
     "chai": "^3.5.0",
     "eslint": "^4.18.2",
-    "yarn": "^1.22.10"
+    "yarn": "^1.22.10",
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "authorizenet": "^1.0.8",
+    "ejs": "^3.1.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node minimal-payment-form.js",
+    "dev": "nodemon minimal-payment-form.js"
   },
   "repository": {
     "type": "git",
